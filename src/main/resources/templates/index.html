@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Mr.Science &mdash;No More Boring Lectures</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+    
+    
+      <div class="container-fluid">
+     
+      
+        <div class="d-flex align-items-center">
+    		
+ 		  <a class="site-navbar-brand" href="#">
+          <img src="images/logo.png" alt="Logo" style="width:100px;height:100px;">
+        </a>
+      
+          <div class="site-logo mr-auto w-25"><a href="index.html">Education Academy</a></div>
+
+          <div class="mx-auto text-center">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mx-auto d-none d-lg-block  m-0 p-0">
+                <li><a href="#home-section" class="nav-link  ">Home</a></li>
+                <li><a href="#courses-section" class="nav-link nav-link.disable">Courses</a></li>
+                <li><a href="#tests-section" class="nav-link">Test Series</a></li>
+                <li><a href="#teachers-section" class="nav-link">Teachers</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="ml-auto w-25">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0">
+                <li class="cta"><a href="#contact-section" class="nav-link"><span>Contact Us</span></a></li>
+              </ul>
+            </nav>
+            <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
+          </div>
+        </div>
+      </div>
+      
+    </header>
+
+    <div class="intro-section" id="home-section">
+      
+      <div class="slide-1" style="background-image: url('images/kalam.jpg');" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div class="row align-items-center">
+                <div class="col-lg-6 mb-4">
+                  <h1  data-aos="fade-up" data-aos-delay="100">Learn From The Expert</h1>
+                  <h4 class="mb-4"  data-aos="fade-up" data-aos-delay="200">Learning gives creativity, creativity leads to thinking, thinking provides knowledge, and knowledge makes you great.</h4>
+                 <p data-aos="fade-up" data-aos-delay="300">-Dr.A.P.J Abdul Kalam</p>
+
+                </div>
+
+                <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="500">
+                  <!-- <form action="" method="post" class="form-box">
+                    <h3 class="h4 text-black mb-4">Sign Up</h3>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Email Addresss">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control" placeholder="Password">
+                    </div>
+                    <div class="form-group mb-4">
+                      <input type="password" class="form-control" placeholder="Re-type Password">
+                    </div>
+                    <div class="form-group">
+                      <input type="submit" class="btn btn-primary btn-pill" value="Sign up">
+                    </div>
+                  </form> -->
+
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+   <!--  <div class="site-section courses-title" id="courses-section">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="">
+            <h2 class="section-title">Courses</h2>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- <div class="site-section courses-entry-wrap"  data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
+        <div class="row">
+
+          <div class="owl-carousel col-12 nonloop-block-14">
+
+            <div class="course bg-white h-100 align-self-stretch">
+              <figure class="m-0">
+                <a href="course-single.html"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
+              </figure>
+              <div class="course-inner-text py-4 px-4">
+                <span class="course-price">$20</span>
+                <div class="meta"><span class="icon-clock-o"></span>4 Lessons / 12 week</div>
+                <h3><a th:href="@{/courses}">Study Law of Physics</a></h3>
+                <p>Lorem ipsum dolor sit amet ipsa nulla adipisicing elit. </p>
+              </div>
+              <div class="d-flex border-top stats">
+                <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
+                <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div>
+              </div>
+            </div>
+
+            <div class="course bg-white h-100 align-self-stretch">
+              <figure class="m-0">
+                <a href="course-single.html"><img src="images/img_2.jpg" alt="Image" class="img-fluid"></a>
+              </figure>
+              <div class="course-inner-text py-4 px-4">
+                <span class="course-price">$99</span>
+                <div class="meta"><span class="icon-clock-o"></span>4 Lessons / 12 week</div>
+                <h3><a th:href="@{/courses}">Logo Design Course</a></h3>
+                <p>Lorem ipsum dolor sit amet ipsa nulla adipisicing elit. </p>
+              </div>
+              <div class="d-flex border-top stats">
+                <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
+                <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div>
+              </div>
+            </div>
+
+            <div class="course bg-white h-100 align-self-stretch">
+              <figure class="m-0">
+                <a href="course-single.html"><img src="images/img_3.jpg" alt="Image" class="img-fluid"></a>
+              </figure>
+              <div class="course-inner-text py-4 px-4">
+                <span class="course-price">$99</span>
+                <div class="meta"><span class="icon-clock-o"></span>4 Lessons / 12 week</div>
+                <h3><a th:href="@{/courses}">JS Programming Language</a></h3>
+                <p>Lorem ipsum dolor sit amet ipsa nulla adipisicing elit. </p>
+              </div>
+              <div class="d-flex border-top stats">
+                <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
+                <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div>
+              </div>
+            </div>
+
+
+
+            <div class="course bg-white h-100 align-self-stretch">
+              <figure class="m-0">
+                <a href="course-single.html"><img src="images/img_4.jpg" alt="Image" class="img-fluid"></a>
+              </figure>
+              <div class="course-inner-text py-4 px-4">
+                <span class="course-price">$20</span>
+                <div class="meta"><span class="icon-clock-o"></span>4 Lessons / 12 week</div>
+                <h3><a th:href="@{/courses}">Study Law of Physics</a></h3>
+                <p>Lorem ipsum dolor sit amet ipsa nulla adipisicing elit. </p>
+              </div>
+              <div class="d-flex border-top stats">
+                <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
+                <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div>
+              </div>
+            </div>
+
+           
+
+             
+
+          </div>
+
+         
+
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-7 text-center">
+            <button class="customPrevBtn btn btn-primary m-1">Prev</button>
+            <button class="customNextBtn btn btn-primary m-1">Next</button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    
+    
+    
+    <div class="site-section courses-title" style="background-image: url('images/cvr.jpg');background-size:cover;" data-stellar-background-ratio="0.5"id="tests-section">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="">
+            <h2 class="section-title">Test Series</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="site-section courses-entry-wrap"  data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
+        <div class="row">
+
+          <div class="owl-carousel col-12 nonloop-block-14">
+
+           
+
+            
+
+            <div class="course bg-white h-100 align-self-stretch" th:each="test : ${allTest}">
+               <figure class="m-0">
+                <a href="course-single.html"><img src="images/test.jpg" alt="Image" class="img-fluid"></a>
+              </figure>
+              <div class="course-inner-text py-4 px-4">
+                <span class="course-price">FREE</span>
+                <div class="meta"><span  th:text="${test.grade}" ></span> &nbsp; Standard</div>
+                <h3><a  th:text="${test.testname}" th:href="@{/id/{id}(id=${test.id})}">Testname</a></h3>
+              </div>
+              <div class="d-flex border-top stats">
+                <div class="py-3 px-4" th:text="${test.subject_name}"><span class="icon-users"></span> Subject</div>
+                <div class="py-3 px-4 w-25 ml-auto border-left" th:text="${test.total_marks}"><span >* &nbsp; Marks </span></div>
+              </div>
+            </div>
+
+          </div>
+
+         
+
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-7 text-center">
+            <button class="customPrevBtn btn btn-primary m-1">Prev</button>
+            <button class="customNextBtn btn btn-primary m-1">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+
+    <div class="site-section" id="teachers-section">
+      <div class="container">
+
+        <div class="row mb-5 justify-content-center">
+          <div class="col-lg-7 mb-5 text-center"  data-aos="fade-up" data-aos-delay="">
+            <h2 class="section-title">Our Teachers</h2>
+            <p class="mb-5">“The mediocre teacher tells. The good teacher explains. The superior teacher demonstrates. The great teacher inspires.” - William Arthur Ward.</p>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="teacher text-center">
+              <img src="images/ceo.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Sabarish</h3>
+                <p class="position">Science Faculty</p>
+                <p>Technology in the hand of great man makes huge leap for mankind.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="teacher text-center">
+              <img src="images/person_2.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Saranya</h3>
+                <p class="position">Commerce Faculty</p>
+                <p>"Success is the sum of small efforts repeated day in and day out". 
+
+ </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="teacher text-center">
+              <img src="images/person_3.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Vaishnavi</h3>
+                <p class="position">Science Faculty</p>
+                <p>"Success is the sum of small efforts repeated day in and day out". 
+
+ </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="site-section pb-0">
+
+      <div class="future-blobs">
+        <div class="blob_2">
+          <img src="images/blob_2.svg" alt="Image">
+        </div>
+        <div class="blob_1">
+          <img src="images/blob_1.svg" alt="Image">
+        </div>
+      </div>
+      <div class="container">
+        <div class="row mb-5 justify-content-center" data-aos="fade-up" data-aos-delay="">
+          <div class="col-lg-7 text-center">
+            <h2 class="section-title">Courses We Offer</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto align-self-start"  data-aos="fade-up" data-aos-delay="100">
+
+            <div class="p-4 rounded bg-white why-choose-us-box">
+
+              <div class="d-flex align-items-center custom-icon-wrap custom-icon-light mb-3">
+                <div class="mr-3"><span class="custom-icon-inner"><span class="icon icon-graduation-cap"></span></span></div>
+                <div><h3 class="m-0">Class 9 - All Subjets</h3></div>
+              </div>
+
+              <div class="d-flex align-items-center custom-icon-wrap custom-icon-light mb-3">
+                <div class="mr-3"><span class="custom-icon-inner"><span class="icon icon-university"></span></span></div>
+                <div><h3 class="m-0">Class 10 - All Subjets</h3></div>
+              </div>
+
+              <div class="d-flex align-items-center custom-icon-wrap custom-icon-light mb-3">
+                <div class="mr-3"><span class="custom-icon-inner"><span class="icon icon-graduation-cap"></span></span></div>
+                <div><h3 class="m-0">Class 11 - Biology-CSE-Commerce</h3></div>
+              </div>
+
+              <div class="d-flex align-items-center custom-icon-wrap custom-icon-light mb-3">
+                <div class="mr-3"><span class="custom-icon-inner"><span class="icon icon-university"></span></span></div>
+                <div><h3 class="m-0">Class 12- Biology-CSE-Commerce</h3></div>
+              </div>
+
+              
+              <div class="d-flex align-items-center custom-icon-wrap custom-icon-light">
+                <div class="mr-3"><span class="custom-icon-inner"><span class="icon icon-graduation-cap"></span></span></div>
+                <div><h3 class="m-0">Engineering Subjects</h3></div>
+              </div> 
+              
+             <div class="d-flex align-items-center custom-icon-wrap custom-icon-light">
+                <div class="mr-3"><span class="custom-icon-inner"><span class="icon icon-university"></span></span></div>
+                <div><h3 class="m-0">French Classes on Demand</h3></div>
+              </div> 
+
+            </div>
+
+
+          </div>
+          <div class="col-lg-7 align-self-end"  data-aos="fade-left" data-aos-delay="200">
+            <img src="images/ban.png" alt="Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+
+
+    <div class="site-section bg-light" id="contact-section">
+      <div class="container">
+
+        <div class="row justify-content-center">
+          <div class="col-md-7">
+
+
+            
+            <h2 class="section-title mb-3">Reach Us</h2>
+            <p class="mb-5">36/1 sachidhanandham street<br>Kosapet<br>Purasaiwalkam<br>Chennai 600012</p>
+          <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+				 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.0559841317786!2d80.25384521388479!3d13.095638490774578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52652eae17f753%3A0x225ffdb216f1b38c!2sMr.%20Science%20education%20centre!5e0!3m2!1sen!2sin!4v1596337783592!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+				</div>
+				  
+         
+          </div>
+        </div>
+      </div>
+    </div>
+    
+     
+    <footer class="footer-section bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>About Mr.Science</h3>
+            <p>MS Education Academy is here to help the students to teach a academic subject in conceptual and experimental way. We ensure the studies of the student to take them in higher  way in their upcoming life</p>
+          </div>
+
+          <div class="col-md-3 ml-auto">
+            <h3>Links</h3>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Courses</a></li>
+              <li><a href="#">Programs</a></li>
+              <li><a href="#">Teachers</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <h3>Contact Us</h3>
+            <p>Email : mrsciencetuts@gmail.com<br>Mobile : +91 97899 04992</p>
+            
+          </div>
+
+        </div>
+
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <div class="border-top pt-5">
+            <p>
+        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+      </p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </footer>
+
+  
+    
+  </div> <!-- .site-wrap -->
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>

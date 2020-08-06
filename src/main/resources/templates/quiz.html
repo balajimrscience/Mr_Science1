@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>MR.Science &mdash; Website by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <!-- <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet"> -->
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" >
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+      
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+        <a class="site-navbar-brand" href="#">
+          <img src="images/logo.png" alt="Logo" style="width:100px;height:100px;">
+        </a>
+          <div class="site-logo mr-auto w-25"><a href="index.html">Education Academy</a></div>
+
+          <div class="mx-auto text-center">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mx-auto d-none d-lg-block  m-0 p-0">
+                
+               
+              </ul>
+            </nav>
+          </div>
+
+          <div class="ml-auto w-25">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0">
+                <li class="cta"><a th:href="@{/}" class="nav-link"><span>Home</span></a></li>
+              </ul>
+            </nav>
+            <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
+          </div>
+        </div>
+      </div>
+      
+    </header>
+
+    <div class="intro-section single-cover" id="home-section">
+      
+      <div class="slide-1 " style="background-image: url('images/kalam.jpg');" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div class="row justify-content-center align-items-center text-center">
+                <div class="col-lg-6">
+                  <h1 data-aos="fade-up" data-aos-delay="0">Admin Page - Create Test</h1>
+                  <p data-aos="fade-up" data-aos-delay="100">Create Test </a></p>
+                </div>
+
+                
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+  
+    
+    
+    <!--  this is test creation -->
+     <div class="site-section"  id ="create-test">
+      <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <form action=""  th:action="@{/insertquiz}" th:object="${questions}" method="post" class="form-box">
+            	<h3 class="h4 text-black mb-4">Create New Test</h3>
+                <div class="form-box" th:each="question, i : *{questions}">
+                
+         
+                
+                 <div class="form-group row">
+                    <div class="col-sm-12">
+                     <label for="inputTestname" th:text ="${i.index +1}"></label>
+                        <label for="inputTestname">Question ?</label>
+                        <input type="text" class="form-control"  th:field="*{questions[__${i.index}__].question}" id="Question" placeholder="Question" required>
+               		 </div>
+               	</div>
+               	 <div class="form-group row">
+                    <div class="col-sm-3">
+                        <label for="inputTestname">Option A</label>
+                        <input type="text" class="form-control"th:field="*{questions[__${i.index}__].option_1}" id="option_1" placeholder="option A" required>
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="inputHostname">Option B</label>
+                        <input type="text" class="form-control" th:field="*{questions[__${i.index}__].option_2}" id="option_2" placeholder="option B" required>
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="inputTestname">Option C</label>
+                        <input type="text" class="form-control" th:field="*{questions[__${i.index}__].option_3}" id="option_3" placeholder="option c" required>
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="inputHostname">Option D</label>
+                        <input type="text" class="form-control"   th:field="*{questions[__${i.index}__].option_4}" id="option_4" placeholder="option D" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-8">
+                        <label for="inputTestname">Answer</label>
+                       <select class="form-control" th:field="*{questions[__${i.index}__].answer}" id="subject" required>
+               			<option th:value="a" th:text="option_A"></option>
+						    <option th:value="b" th:text="option_B"></option>
+						   <option th:value="c" th:text="option_C"></option>
+						   <option th:value="c" th:text="option_D"></option>
+						 </select>
+               		 </div>
+               		<div class="col-sm-4">
+                        <label for="inputAddressLine2">Subject</label>
+					<select class="form-control" th:field="*{questions[__${i.index}__].subject}" id="subject">
+							<option th:value="General" th:text="General"></option>
+						    <option th:value="English" th:text="English"></option>
+						   <option th:value="Maths" th:text="Maths"></option>
+						   <option th:value="Science" th:text="Science"></option>
+						   <option th:value="Social" th:text="Social"></option>
+						    <option th:value="Physics" th:text="Physics"></option>
+						   <option th:value="Chemistry" th:text="Chemistry"></option>
+						    <option th:value="Biology" th:text="Biology"></option>
+						   <option th:value="Botany" th:text="Botany"></option>
+						    <option th:value="Zoology" th:text="Zoology"></option>
+						    <option th:value="CSE" th:text="CSE"></option>
+						    <option th:value="Commerce" th:text="Commerce"></option>
+						    <option th:value="Accounts" th:text="Accounts"></option>
+						    <option th:value="Buisness_Maths" th:text="Buisness_Maths"></option>
+						    <option th:value="Computer_Application" th:text="Computer_Application"></option>
+						    
+						  </select>
+                    </div>
+               	</div>
+               	<div class="form-group row">
+                    <div class="col-sm-12">
+                        <label for="inputTestname">Explanation</label>
+                        <input type="text" class="form-control" th:field="*{questions[__${i.index}__].explanation}"  id="inputFirstname" placeholder="Explanation" required>
+               		 </div>
+               	</div>
+               		 </div>
+               		 
+               		 <hr>
+           </div> 
+                <div class="form-group">
+                      <input type="submit" class="btn btn-primary btn-pill" value="Create Test">
+                 </div>
+            </form>
+        </div>
+    </div>
+
+	</div>
+      </div>
+    </div>
+              
+
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div> 
+
+    
+     
+    <footer class="footer-section bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>About MR SCIENCE</h3>
+             <p>MS Education Academy is here to help the students to teach a academic subject in conceptual and experimental way. We ensure the studies of the student to take them in higher  way in their upcoming life</p>
+          </div>
+
+          <div class="col-md-3 ml-auto">
+            <h3>Links</h3>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Courses</a></li>
+              <li><a href="#">Programs</a></li>
+              <li><a href="#">Teachers</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <h3>Subscribe</h3>
+             <h3>Contact Us</h3>
+            <p>Email : mrsciencetuts@gmail.com<br>Mobile : +91 97899 04992</p>
+            
+          </div>
+
+        </div>
+
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <div class="border-top pt-5">
+            <p>
+        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+      </p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </footer>
+
+  
+    
+  </div> <!-- .site-wrap -->
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+
+  
+  <script src="js/main.js"></script>
+  
+  
+  
+  
+  
+  
+  
+    
+  </body>
+</html>
